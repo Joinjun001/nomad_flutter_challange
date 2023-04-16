@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/screens/home_screen.dart';
-import 'package:movie_app/services/api_service.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -20,6 +19,5 @@ class _AppState extends State<App> {
 }
 
 void main() {
-  ApiService().getMovie();
   runApp(const App());
 }
