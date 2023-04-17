@@ -83,6 +83,19 @@ class _MovieDetailState extends State<MovieDetail> {
                         height: 20,
                       ),
                       Center(
+                        child: Text(
+                          widget.title,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: widget.title.length > 13 ? 30 : 45,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Center(
                         child: RatingBar.builder(
                           initialRating: widget.voteAverage / 2,
                           minRating: 1,
@@ -93,7 +106,7 @@ class _MovieDetailState extends State<MovieDetail> {
                               const EdgeInsets.symmetric(horizontal: 4.0),
                           itemBuilder: (context, _) => const Icon(
                             Icons.star_rounded,
-                            color: Colors.white,
+                            color: Colors.yellow,
                           ),
                           onRatingUpdate: (rating) {},
                         ),
@@ -108,20 +121,6 @@ class _MovieDetailState extends State<MovieDetail> {
                                 children: [
                                   const SizedBox(
                                     height: 50,
-                                  ),
-                                  Center(
-                                    child: Text(
-                                      widget.title,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize:
-                                            widget.title.length > 13 ? 30 : 45,
-                                        fontWeight: FontWeight.w900,
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 40,
                                   ),
                                   Text(
                                     '${moviedetail!.runtime} minutes',
@@ -174,7 +173,7 @@ class _MovieDetailState extends State<MovieDetail> {
                                       height: 50,
                                       child: const Center(
                                         child: Text(
-                                          "Buy Ticket",
+                                          "티켓 사세요 허허",
                                           style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 20,

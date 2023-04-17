@@ -1,16 +1,7 @@
-# movie_app
+# 노마드코더 보고 만든 무비추천 앱입니다.
 
-A new Flutter project.
+![이미지에 대한 대체 텍스트]("C:/Users/injoo/OneDrive/'바탕 화면'/짤/111.png")
+앱 화면
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+api를 사용하는 FutureBuilder가 가장 어려웠었다.
+FutureBuilder는 api를 사용할때 stateless 위젯으로 사용할수있게 도와준다.

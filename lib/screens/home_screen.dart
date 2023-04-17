@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movie_app/models/movie_model.dart';
 import 'package:movie_app/services/api_service.dart';
 import 'package:movie_app/widgets/movie_widget.dart';
+import 'package:movie_app/widgets/popular_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -52,13 +53,13 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 240,
+                          height: 190,
                           child: ListView.builder(
                             scrollDirection: Axis.horizontal,
                             itemCount: popularMovies.length,
                             itemBuilder: (context, index) {
                               var pmovie = popularMovies[index];
-                              return Movie(
+                              return PopularMovie(
                                 posterPath: pmovie.posterPath,
                                 popularity: pmovie.popularity,
                                 adult: pmovie.adult,
@@ -85,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 160,
+                          height: 240,
                           child: ListView.builder(
                             scrollDirection: Axis.horizontal,
                             itemCount: cinemaMovies.length,
@@ -118,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 160,
+                          height: 200,
                           child: ListView.builder(
                             scrollDirection: Axis.horizontal,
                             itemCount: comingMovies.length,
